@@ -1,0 +1,146 @@
+# FERATSK DİJİTAL — Yönetim paneli (Decap CMS)
+# Panel adresi: https://feratskdijital.com/admin
+backend:
+  name: github
+  repo: ferhatsk4156-cmyk/feratsk-dijital
+  branch: main
+  commit_messages:
+    create: "Panel: {{collection}} '{{slug}}' eklendi"
+    update: "Panel: {{collection}} '{{slug}}' güncellendi"
+    delete: "Panel: {{collection}} '{{slug}}' silindi"
+    uploadMedia: "Panel: medya yüklendi '{{path}}'"
+    deleteMedia: "Panel: medya silindi '{{path}}'"
+
+locale: "tr"
+site_url: "https://feratskdijital.com"
+display_url: "https://feratskdijital.com"
+logo_url: "https://feratskdijital.com/assets/logo-lockup-orange.png"
+media_folder: "media"
+public_folder: "/media"
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  # ---------------------------------------------------------------- AYARLAR
+  - name: "site"
+    label: "Site içerikleri"
+    editor: { preview: false }
+    files:
+      - name: "settings"
+        label: "İletişim bilgileri"
+        file: "data/settings.json"
+        fields:
+          - { label: "WhatsApp numarası", name: "whatsapp", widget: "string", required: false, hint: "Örnek: 0553 710 41 56" }
+          - { label: "Telefon (sitede görünen)", name: "phone", widget: "string", required: false }
+          - { label: "E-posta", name: "email", widget: "string", required: false }
+          - { label: "Instagram adresi", name: "instagram", widget: "string", required: false, hint: "Örnek: https://www.instagram.com/feratskdijital/" }
+          - { label: "Form gönderim adresi (Formspree)", name: "formEndpoint", widget: "string", required: false, hint: "formspree.io'dan aldığınız https://formspree.io/f/... adresi. Boş kalırsa form mesaj göndermez." }
+
+      - name: "reels"
+        label: "Girişteki reels videoları"
+        file: "data/reels.json"
+        fields:
+          - label: "Videolar"
+            name: "reels"
+            widget: "list"
+            label_singular: "video"
+            summary: "{{fields.caption_tr}}"
+            hint: "Sıralamayı sürükleyerek değiştirebilirsiniz. Dikey (9:16) MP4, her biri en fazla ~15 MB."
+            fields:
+              - { label: "Video dosyası (MP4)", name: "src", widget: "file", choose_url: false }
+              - { label: "Kapak görseli (isteğe bağlı)", name: "poster", widget: "image", required: false, choose_url: false }
+              - { label: "Açıklama (Türkçe)", name: "caption_tr", widget: "string" }
+              - { label: "Açıklama (İngilizce)", name: "caption_en", widget: "string", required: false }
+
+      - name: "projects"
+        label: "Portfolyo projeleri"
+        file: "data/projects.json"
+        fields:
+          - label: "Projeler"
+            name: "projects"
+            widget: "list"
+            label_singular: "proje"
+            summary: "{{fields.title_tr}}"
+            hint: "En üstteki proje sitede ilk sırada görünür. Örnek kartları gerçek işlerinizi ekledikçe silebilirsiniz."
+            fields:
+              - { label: "Proje adı (Türkçe)", name: "title_tr", widget: "string" }
+              - { label: "Proje adı (İngilizce)", name: "title_en", widget: "string", required: false }
+              - label: "Kategori"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Gayrimenkul Filmleri", value: "realestate" }
+                  - { label: "Mimari", value: "architecture" }
+                  - { label: "Reklam Prodüksiyonu", value: "commercial" }
+                  - { label: "Sosyal Medya Kampanyaları", value: "social" }
+                  - { label: "Drone Çekimleri", value: "drone" }
+                  - { label: "Marka İçerikleri", value: "brand" }
+                  - { label: "Yapay Zeka", value: "ai" }
+                  - { label: "Düğün Çekimleri", value: "wedding" }
+              - { label: "Kapak fotoğrafı", name: "cover_image", widget: "image", required: false, choose_url: false, hint: "Yatay fotoğraf önerilir (en az 1600 px genişlik)." }
+              - { label: "Kapak videosu (isteğe bağlı, MP4)", name: "cover_video", widget: "file", required: false, choose_url: false, hint: "Eklenirse fotoğraf, videonun kapağı olarak kullanılır." }
+              - { label: "Kısa açıklama (Türkçe)", name: "summary_tr", widget: "text" }
+              - { label: "Kısa açıklama (İngilizce)", name: "summary_en", widget: "text", required: false }
+              - { label: "Format (Türkçe)", name: "format_tr", widget: "string", required: false, hint: "Örnek: 16:9 ana film · 9:16 reels" }
+              - { label: "Format (İngilizce)", name: "format_en", widget: "string", required: false }
+              - { label: "Teslim edilenler (Türkçe)", name: "deliverables_tr", widget: "list", required: false, field: { label: "Madde", name: "item", widget: "string" } }
+              - { label: "Teslim edilenler (İngilizce)", name: "deliverables_en", widget: "list", required: false, field: { label: "Item", name: "item", widget: "string" } }
+              - { label: "Yıl", name: "year", widget: "string", required: false }
+              - { label: "Örnek proje mi?", name: "sample", widget: "boolean", default: false, hint: "Açık olursa kartta 'Örnek' etiketi görünür. Gerçek işlerde kapalı tutun." }
+              - label: "Görsel yoksa kullanılacak çizim"
+                name: "scene"
+                widget: "select"
+                required: false
+                default: "light"
+                options: ["skyline", "villa", "arch", "studio", "plate", "coast", "light", "ai", "wedding"]
+              - { label: "Bağlantı kısa adı (isteğe bağlı)", name: "id", widget: "string", required: false, hint: "Boş bırakılırsa proje adından oluşturulur." }
+
+  # ---------------------------------------------------------------- BLOG
+  - name: "blog"
+    label: "Blog yazıları"
+    label_singular: "blog yazısı"
+    folder: "content/blog"
+    create: true
+    delete: true
+    format: "json"
+    extension: "json"
+    slug: "{{fields.title_tr}}"
+    identifier_field: "title_tr"
+    summary: "{{title_tr}} · {{date}}"
+    sortable_fields: ["date", "title_tr"]
+    editor: { preview: false }
+    fields:
+      - { label: "Başlık (Türkçe)", name: "title_tr", widget: "string" }
+      - { label: "Başlık (İngilizce)", name: "title_en", widget: "string", required: false }
+      - { label: "Yayın tarihi", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Kategori (Türkçe)", name: "category_tr", widget: "string", hint: "Örnek: Gayrimenkul & İnşaat" }
+      - { label: "Kategori (İngilizce)", name: "category_en", widget: "string", required: false }
+      - { label: "Özet (Türkçe)", name: "excerpt_tr", widget: "text", hint: "1–2 cümle. Google'da açıklama olarak da kullanılır." }
+      - { label: "Özet (İngilizce)", name: "excerpt_en", widget: "text", required: false }
+      - { label: "Yazı (Türkçe)", name: "body_tr", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "bulleted-list"], editor_components: [], modes: ["rich_text"] }
+      - { label: "Yazı (İngilizce)", name: "body_en", widget: "markdown", required: false, buttons: ["bold", "italic", "link", "heading-two", "heading-three", "bulleted-list"], editor_components: [], modes: ["rich_text"] }
+      - label: "İlgili hizmet"
+        name: "service"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Dijital strateji", value: "strategy" }
+          - { label: "Film & prodüksiyon", value: "film" }
+          - { label: "Gayrimenkul & inşaat", value: "realestate" }
+          - { label: "Yaratıcı içerik", value: "content" }
+          - { label: "Yapay zeka", value: "ai" }
+          - { label: "Düğün & özel gün", value: "wedding" }
+      - label: "Kart rengi"
+        name: "tone"
+        widget: "select"
+        default: "peach"
+        options:
+          - { label: "Şeftali", value: "peach" }
+          - { label: "Gökyüzü", value: "sky" }
+          - { label: "Nane", value: "mint" }
+          - { label: "Pembe", value: "blush" }
+          - { label: "Lavanta", value: "lavender" }
+          - { label: "Krem", value: "butter" }
+      - { label: "Okuma süresi (dk)", name: "minutes", widget: "number", required: false, value_type: "int", min: 1, hint: "Boş bırakılırsa otomatik hesaplanır." }

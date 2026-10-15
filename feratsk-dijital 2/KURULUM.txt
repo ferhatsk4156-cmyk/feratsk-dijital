@@ -1,0 +1,33 @@
+FERATSK DIJITAL - YONETIM PANELI KURULUMU
+==========================================
+Panel adresi (kurulumdan sonra): https://feratskdijital.com/admin
+
+A) GITHUB
+ 1. github.com'da ucretsiz hesap acin.
+ 2. Sag ustte "+" > "New repository". Adi: feratsk-dijital  (Private secebilirsiniz) > Create.
+ 3. Acilan sayfada "uploading an existing file" baglantisina tiklayin.
+ 4. Bu klasorun ICINDEKI her seyi (admin, assets, blog, content, data, js, tools,
+    index.html, netlify.toml ...) sayfaya surukleyin > "Commit changes".
+
+B) NETLIFY'I GITHUB'A BAGLAMA
+ 1. Netlify > sitenize girin > Site configuration > Build & deploy > Continuous deployment
+    > "Link repository" > GitHub > feratsk-dijital deposunu secin.
+ 2. Ayarlar netlify.toml'dan otomatik gelir (Build command: node tools/build.js, Publish: .)
+ 3. Deploy bitince site GitHub'daki dosyalardan yayinlanir.
+
+C) PANEL GIRISI (GitHub ile oturum acma)
+ 1. GitHub > sag ustte profil > Settings > Developer settings > OAuth Apps > New OAuth App
+      Application name:  FERATSK Panel
+      Homepage URL:      https://feratskdijital.com
+      Callback URL:      https://api.netlify.com/auth/done
+    > Register. Sonra "Generate a new client secret".
+ 2. Netlify > sitenize girin > Site configuration > Access & security > OAuth
+    > Install provider > GitHub > Client ID ve Client Secret'i yapistirin > Install.
+ 3. https://feratskdijital.com/admin adresine gidin > "Login with GitHub".
+
+PANELDE NELER VAR?
+ - Site icerikleri > Iletisim bilgileri (WhatsApp, telefon, e-posta, Instagram, form adresi)
+ - Site icerikleri > Giristeki reels videolari (video yukle, siralama, aciklama)
+ - Site icerikleri > Portfolyo projeleri (fotograf/video, aciklama, kategori)
+ - Blog yazilari (yeni yazi, duzenleme, silme)
+Her "Publish/Yayinla" sonrasi Netlify siteyi 1-2 dakikada otomatik gunceller.

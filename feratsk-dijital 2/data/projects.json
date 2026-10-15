@@ -1,0 +1,241 @@
+{
+  "projects": [
+    {
+      "id": "villa-3d",
+      "sample": true,
+      "category": "realestate",
+      "scene": "villa",
+      "title_tr": "Villa Projesi 3D Yapım Animasyonu",
+      "title_en": "Villa 3D Construction Animation",
+      "summary_tr": "Temelden anahtar teslime kadar her aşamayı gösteren, sonunda kamerayla villanın içine giren 3D animasyon formatı. Satış ofisi ve ön satış kampanyaları için.",
+      "summary_en": "A 3D animation format that shows every stage from foundation to handover and ends with the camera moving inside the villa. Built for sales offices and off-plan campaigns.",
+      "format_tr": "3D animasyon · 16:9 ve 9:16",
+      "format_en": "3D animation · 16:9 and 9:16",
+      "deliverables_tr": [
+        "Yapım aşamaları animasyonu",
+        "Dıştan içe kamera geçişi",
+        "İç mekân sahneleri",
+        "Sosyal medya kesitleri"
+      ],
+      "deliverables_en": [
+        "Construction-stage animation",
+        "Exterior-to-interior camera move",
+        "Interior scenes",
+        "Social cut-downs"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "konut-projesi",
+      "sample": true,
+      "category": "realestate",
+      "scene": "skyline",
+      "title_tr": "Konut Projesi Tanıtım Filmi",
+      "title_en": "Residential Development Film",
+      "summary_tr": "Bir konut projesinin yaşam alanlarını, çevresini ve mimari karakterini tek bir sinematik anlatıda birleştiren tanıtım filmi formatı.",
+      "summary_en": "A launch film format that brings a residential development's living spaces, surroundings and architectural character into one cinematic story.",
+      "format_tr": "16:9 ana film · 9:16 sosyal medya kesitleri",
+      "format_en": "16:9 hero film · 9:16 social cut-downs",
+      "deliverables_tr": [
+        "90 sn ana tanıtım filmi",
+        "Drone açılış planları",
+        "Satış ofisi ekran versiyonu",
+        "Reels kesitleri"
+      ],
+      "deliverables_en": [
+        "90-second hero film",
+        "Drone opening shots",
+        "Sales-office screen version",
+        "Reels cut-downs"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "mimari-detay",
+      "sample": true,
+      "category": "architecture",
+      "scene": "arch",
+      "title_tr": "Mimari Detay Serisi",
+      "title_en": "Architectural Detail Series",
+      "summary_tr": "Yapının malzemesini, ışığını ve oranlarını yakın planlarla anlatan; mimarlık ofisleri ve inşaat firmaları için görsel seri.",
+      "summary_en": "A visual series that reveals a building's materials, light and proportions through close framing, made for architecture practices and builders.",
+      "format_tr": "Fotoğraf seti · kısa sinemagraf döngüleri",
+      "format_en": "Still series · short cinemagraph loops",
+      "deliverables_tr": [
+        "Mimari fotoğraf seti",
+        "Gün ışığı zaman atlamaları",
+        "Portfolyo için düzenlenmiş görseller"
+      ],
+      "deliverables_en": [
+        "Architectural still set",
+        "Daylight time-lapses",
+        "Portfolio-ready edits"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "urun-reklami",
+      "sample": true,
+      "category": "commercial",
+      "scene": "studio",
+      "title_tr": "Ürün Reklam Filmi",
+      "title_en": "Product Commercial",
+      "summary_tr": "Stüdyo ışığı, kontrollü kamera hareketi ve net bir mesajla ürünü kahramanlaştıran reklam filmi formatı.",
+      "summary_en": "A commercial format that makes the product the hero through studio lighting, controlled camera movement and a clear message.",
+      "format_tr": "30 sn · 15 sn · 6 sn versiyonlar",
+      "format_en": "30s · 15s · 6s versions",
+      "deliverables_tr": [
+        "Senaryo ve storyboard",
+        "Stüdyo çekimi",
+        "Kurgu, renk ve ses tasarımı",
+        "Platform bazlı versiyonlar"
+      ],
+      "deliverables_en": [
+        "Script and storyboard",
+        "Studio shoot",
+        "Edit, grade and sound design",
+        "Platform-specific versions"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "restoran-reels",
+      "sample": true,
+      "category": "social",
+      "scene": "plate",
+      "title_tr": "Restoran Reels Kampanyası",
+      "title_en": "Restaurant Reels Campaign",
+      "summary_tr": "Mutfağın ritmini, tabağın detayını ve mekânın atmosferini kısa videolara dönüştüren aylık içerik kampanyası formatı.",
+      "summary_en": "A monthly content campaign format that turns the kitchen's rhythm, plate details and venue atmosphere into short-form video.",
+      "format_tr": "9:16 Reels · 4:5 gönderi tasarımları",
+      "format_en": "9:16 Reels · 4:5 post designs",
+      "deliverables_tr": [
+        "Aylık içerik planı",
+        "Reels serisi",
+        "Menü ve kampanya görselleri",
+        "Yayın takvimi"
+      ],
+      "deliverables_en": [
+        "Monthly content plan",
+        "Reels series",
+        "Menu and campaign visuals",
+        "Publishing calendar"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "kiyi-drone",
+      "sample": true,
+      "category": "drone",
+      "scene": "coast",
+      "title_tr": "Kıyı Şeridi Drone Sekansı",
+      "title_en": "Coastal Drone Sequence",
+      "summary_tr": "Konumu, ölçeği ve çevre ilişkisini yukarıdan anlatan; proje ve marka filmlerine eklenebilen havadan çekim sekansı.",
+      "summary_en": "An aerial sequence that shows location, scale and context from above, ready to cut into development and brand films.",
+      "format_tr": "4K havadan çekim · tepeden ve yörünge planları",
+      "format_en": "4K aerial · top-down and orbit shots",
+      "deliverables_tr": [
+        "Uçuş planı ve izin süreci",
+        "Havadan video ve fotoğraf",
+        "Renk düzenlemesi"
+      ],
+      "deliverables_en": [
+        "Flight plan and permits",
+        "Aerial video and stills",
+        "Colour grading"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "marka-hikayesi",
+      "sample": true,
+      "category": "brand",
+      "scene": "light",
+      "title_tr": "Marka Hikâyesi Filmi",
+      "title_en": "Brand Story Film",
+      "summary_tr": "Markanın neden var olduğunu, kimlere dokunduğunu ve nasıl çalıştığını insan odaklı bir anlatıyla aktaran film formatı.",
+      "summary_en": "A film format that tells why a brand exists, who it serves and how it works, through a people-first story.",
+      "format_tr": "2–3 dk ana film · web ve sosyal medya kesitleri",
+      "format_en": "2–3 min hero film · web and social cut-downs",
+      "deliverables_tr": [
+        "Röportaj ve hikâye kurgusu",
+        "Belgesel tarzı çekim",
+        "Altyazılı versiyonlar"
+      ],
+      "deliverables_en": [
+        "Interview and story structure",
+        "Documentary-style shoot",
+        "Subtitled versions"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "ai-kampanya",
+      "sample": true,
+      "category": "ai",
+      "scene": "ai",
+      "title_tr": "Yapay Zeka Destekli Kampanya",
+      "title_en": "AI-Assisted Campaign",
+      "summary_tr": "Gerçek ürün çekimleriyle yapay zeka ile üretilmiş arka planları ve sahneleri birleştiren, onlarca reklam varyasyonunu kısa sürede çıkaran kampanya formatı.",
+      "summary_en": "A campaign format that combines real product shots with AI-generated backgrounds and scenes to produce many ad variations quickly.",
+      "format_tr": "4:5 · 9:16 · 1:1 görsel ve kısa video",
+      "format_en": "4:5 · 9:16 · 1:1 stills and short video",
+      "deliverables_tr": [
+        "Konsept ve moodboard",
+        "AI ile sahne üretimi",
+        "Ürün çekimi ile birleştirme",
+        "A/B test varyasyonları"
+      ],
+      "deliverables_en": [
+        "Concept and moodboard",
+        "AI scene generation",
+        "Compositing with product shots",
+        "A/B test variations"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    },
+    {
+      "id": "dugun-filmi",
+      "sample": true,
+      "category": "wedding",
+      "scene": "wedding",
+      "title_tr": "Düğün Filmi",
+      "title_en": "Wedding Film",
+      "summary_tr": "Hazırlıktan ilk dansa kadar günün duygusunu sinematik bir anlatıyla aktaran düğün filmi formatı; drone planları ve kısa reels klibiyle.",
+      "summary_en": "A wedding film format that carries the emotion of the day from getting ready to the first dance, with drone shots and a short reels clip.",
+      "format_tr": "4–6 dk film · 60 sn klip · 9:16 reels",
+      "format_en": "4–6 min film · 60s highlight · 9:16 reels",
+      "deliverables_tr": [
+        "Hazırlık ve tören çekimi",
+        "Drone planları",
+        "Kurgu, renk ve müzik",
+        "Sosyal medya klibi"
+      ],
+      "deliverables_en": [
+        "Getting-ready and ceremony coverage",
+        "Drone shots",
+        "Edit, grade and music",
+        "Social highlight clip"
+      ],
+      "cover_image": "",
+      "cover_video": "",
+      "year": ""
+    }
+  ]
+}
