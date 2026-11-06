@@ -192,7 +192,7 @@ window.I18N = {
       contactTitle: "İletişim",
       socialEmpty: "Hesaplar eklenecek",
       contactEmpty: "Bilgiler eklenecek",
-      rights: "Tüm hakları saklıdır.",
+      rights: "Tüm hakları saklıdır. İletişim formu ile paylaştığınız kişisel veriler, 6698 sayılı KVKK kapsamında yalnızca talebinizi değerlendirmek amacıyla işlenir.",
       top: "Başa dön"
     }
   },
@@ -384,7 +384,7 @@ window.I18N = {
       contactTitle: "Contact",
       socialEmpty: "Accounts to be added",
       contactEmpty: "Details to be added",
-      rights: "All rights reserved.",
+      rights: "All rights reserved. Personal data you share via the contact form is processed solely to evaluate your request, under Turkish Law No. 6698 on the Protection of Personal Data (KVKK).",
       top: "Back to top"
     }
   }
