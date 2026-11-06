@@ -1,4 +1,5 @@
 (function () {
+  if (window.__FERATSK_EDIT_MODE) return;
   var SUPABASE_URL = "https://slcrkqkxrpurcugxmuma.supabase.co";
   var ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsY3JrcWt4cnB1cmN1Z3htdW1hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4ODc1NDEsImV4cCI6MjEwOTQ2MzU0MX0.92_pKhx6rE8Ck0f6w_YtwlbcSFarVR-b61nVA4s5wM4";
   var CACHE_KEY = "feratsk.panel.cache.v1";
