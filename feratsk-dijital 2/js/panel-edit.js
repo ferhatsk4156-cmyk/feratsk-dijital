@@ -70,7 +70,6 @@ if (field) {
         return;
         }
       }
-    }
       for (var i = 0; i < SECTION_MAP.length; i++) {
         var card = e.target.closest(SECTION_MAP[i][0]);
         if (card) {
