@@ -58,17 +58,19 @@
 
   function setupEditClicks() {
     document.addEventListener("click", function (e) {
-      var field = e.target.closest("[data-c], [data-i18n]");
-      if (field) {
+            var field = e.target.closest("[data-c], [data-i18n], [data-i18n-lines], [data-i18n-ph], [data-i18n-aria]");
+if (field) {
         e.preventDefault();
         e.stopPropagation();
         if (field.hasAttribute("data-c")) {
           post({ type: "feratsk:edit", lang: currentLang(), kind: "content", path: field.getAttribute("data-c") });
         } else {
-          post({ type: "feratsk:edit", lang: currentLang(), kind: "text", path: field.getAttribute("data-i18n") });
-        }
+                  post({ type: "feratsk:edit", lang: currentLang(), kind: "text", path: field.getAttribute("data-i18n") || field.getAttribute("data-i18n-lines") || field.getAttribute("data-i18n-ph") || field.getAttribute("data-i18n-aria") });
+
         return;
+        }
       }
+    }
       for (var i = 0; i < SECTION_MAP.length; i++) {
         var card = e.target.closest(SECTION_MAP[i][0]);
         if (card) {
