@@ -145,12 +145,13 @@ for (const dir of ["blog", "blog/en"]) {
   const d = path.join(root, dir);
   if (fs.existsSync(d)) fs.readdirSync(d).filter((f) => f.endsWith(".html")).forEach((f) => fs.unlinkSync(path.join(d, f)));
 }
-const urls = [`${SITE_URL}/`];
+const today = new Date().toISOString().slice(0, 10);
+const urls = [{ loc: `${SITE_URL}/`, lastmod: today }];
 for (const lang of ["tr", "en"]) {
   const base = lang === "tr" ? "blog/" : "blog/en/";
   for (const p of posts) {
-    const url = `${SITE_URL}/${base}${p.slug}.html`;
-    urls.push(url);
+            const url = `${SITE_URL}/${base}${p.slug}.html`;
+        urls.push({ loc: url, lastmod: p.date });
     out(`${base}${p.slug}.html`, page({
       lang, url, title: `${p.title[lang]} | FERATSK DİJİTAL`, desc: p.excerpt[lang],
       alt: { tr: `${SITE_URL}/blog/${p.slug}.html`, en: `${SITE_URL}/blog/en/${p.slug}.html` },
@@ -159,13 +160,13 @@ for (const lang of ["tr", "en"]) {
 <article class="w">${p.body[lang]}<a class="cta" href="/#contact">${lang === "tr" ? "Projeniz için teklif alın" : "Get a quote for your project"}</a></article>`
     }));
   }
-  urls.push(`${SITE_URL}/${base}`);
+    urls.push({ loc: `${SITE_URL}/${base}`, lastmod: posts[0] ? posts[0].date : today });
   out(`${base}index.html`, page({
     lang, url: `${SITE_URL}/${base}`, title: "Blog | FERATSK DİJİTAL",
     desc: lang === "tr" ? "Gayrimenkul, prodüksiyon, sosyal medya, yapay zeka ve düğün çekimi üzerine rehberler." : "Guides on real estate, production, social media, AI and wedding films.",
     body: `<div class="hero"><div class="w"><h1>Blog</h1></div></div><div class="w list">${posts.map((p) => `<a href="/${base}${p.slug}.html"><span class="cat">${esc(p.category[lang])}</span><h2>${esc(p.title[lang])}</h2><p>${esc(p.excerpt[lang])}</p></a>`).join("")}</div>`
   }));
 }
-out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}\n</urlset>\n`);
+out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 out("robots.txt", `User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 console.log(`Build OK: ${projects.length} projects, ${reels.length} reels, ${posts.length} posts`);
