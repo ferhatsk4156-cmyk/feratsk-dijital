@@ -7,8 +7,8 @@
 window.I18N = {
   tr: {
     meta: {
-      title: "FERATSK DİJİTAL | Yaratıcı Stüdyo ve Film Prodüksiyon",
-      description: "FERATSK DİJİTAL; sosyal medya yönetimi, reklam filmi, drone çekimleri, gayrimenkul tanıtımları ve yaratıcı içerik üretimiyle markaların dijital etkisini büyütür.",
+            title: "FERATSK DİJİTAL | Darıca & Kocaeli Drone Çekimi, Sosyal Medya ve Film Prodüksiyon",
+            description: "FERATSK DİJİTAL; Darıca ve Kocaeli'de sosyal medya yönetimi, reklam filmi, drone çekimi, gayrimenkul tanıtımı, düğün ve konvoy çekimi hizmetleri sunar. Markanızın dijital etkisini birlikte büyütelim.",
       ogLocale: "tr_TR"
     },
     a11y: {
@@ -199,8 +199,8 @@ window.I18N = {
 
   en: {
     meta: {
-      title: "FERATSK DİJİTAL | Creative Studio & Film Production",
-      description: "FERATSK DİJİTAL combines digital strategy, social media management, cinematic production, drone cinematography, and creative content to help brands stand out.",
+      title: "FERATSK DİJİTAL | Darıca & Kocaeli Drone, Social Media & Film Production",
+            description: "FERATSK DİJİTAL provides social media management, commercial films, drone cinematography, real estate showcases, wedding and convoy coverage in Darıca and Kocaeli. Let's grow your brand's digital presence together.",
       ogLocale: "en_US"
     },
     a11y: {
