@@ -148,6 +148,12 @@ for (const dir of ["blog", "blog/en"]) {
 const today = new Date().toISOString().slice(0, 10);
 const urls = [{ loc: `${SITE_URL}/`, lastmod: today }];
 urls.push({ loc: `${SITE_URL}/hizmet-bolgelerimiz.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/reklam-filmi-video-produksiyon.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/emlak-gayrimenkul-cekimi.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/drone-cekimi.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/dugun-nisan-konvoy-cekimi.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/fabrika-sanayi-tanitim-filmi.html`, lastmod: today });
+urls.push({ loc: `${SITE_URL}/diger-hizmetlerimiz.html`, lastmod: today });
 for (const lang of ["tr", "en"]) {
   const base = lang === "tr" ? "blog/" : "blog/en/";
   for (const p of posts) {
