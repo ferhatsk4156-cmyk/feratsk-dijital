@@ -147,6 +147,7 @@ for (const dir of ["blog", "blog/en"]) {
 }
 const today = new Date().toISOString().slice(0, 10);
 const urls = [{ loc: `${SITE_URL}/`, lastmod: today }];
+urls.push({ loc: `${SITE_URL}/hizmet-bolgelerimiz.html`, lastmod: today });
 for (const lang of ["tr", "en"]) {
   const base = lang === "tr" ? "blog/" : "blog/en/";
   for (const p of posts) {
